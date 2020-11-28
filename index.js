@@ -30,14 +30,17 @@ let Calculator = {
 }
 
 function actionApplyer(start, arrayOfTransforms){
-    
+    if (arrayOfTransforms == []){
+        return start
+    }else{
         let a = start
         for (const f of arrayOfTransforms){
             a = f(a)
         }
         return a
-
     }
+}
+
 // let actionApplyer = function(start, ray) {
 //     let a = start
   
